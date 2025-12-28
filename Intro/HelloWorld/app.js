@@ -7,3 +7,10 @@ var hero = {
 hero.age = 50;
 console.log(msg);
 console.log(hero.age + 1);
+function sayHello(msg) {
+    console.log(msg);
+}
+(function () {
+    var a = 10;
+    console.log(a);
+})();

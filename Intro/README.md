@@ -41,7 +41,9 @@ El archivo [tsconfig.js](https://aka.ms/tsconfig) permite gestionar las configur
   "compilerOptions": {
     "module": "CommonJS", // Forma como debe gestionar los módulos
     "target": "ES5", // Versión a la cuál va a transpilar
-    "strict": true // Modo estricto
+    "strict": true, // Modo estricto
+    "noImplicitAny": true, // Muestra un error para tipos de dato any
+    "strictNullChecks": true // Cuando es true (valor recomendado) no permite que las variables puedan tener el valor undefined o null
   }
 }
 ```

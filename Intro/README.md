@@ -26,11 +26,17 @@ Ahora aunque Typescript puede deducir los tipos con base al valor inicializado, 
 
 ## Tipos de datos
 
-Typescript tiene como base todos los tipos de datos que tiene Javascript, tiene otros tipos de datos adicionales y también nos permite crear nuevos tipos. En la [documentación oficial](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html) se encuentran todos los tipos y su detalle.
+Typescript tiene como base todos los tipos de datos que tiene Javascript, tiene otros tipos de datos adicionales y también nos permite crear nuevos tipos. En la [documentación oficial](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html) se encuentran todos los tipos y su detalle. Por ahora los diferentes ejemplos esta introducción los puede encontrar en el siguiente orden y carpetas:
+
+1. **[HelloWorld](./HelloWorld):** Primer acercamiento a Typescript.
+2. **[Tipos](./Tipos):** Ejemplos de los tipos más usados.
+3. **[Funciones](./Funciones):** Ejemplos de cómo tipar las funciones.
+4. **[Objetos](./Objetos):** Ejemplos de cómo tipar los objetos y definiciónd e tipos personalizados.
+5. **Carpetas de ejercicios:** Tienen las respectivas soluciones de los ejercicios para [tipos básicos](./Ejercicio1), [tipado de funciones](./Ejercicio2) y [tipado de objetos](./Ejercicio3).
 
 ## Transpilación a Javascript
 
-Como el navegador no entiende la sintaxis de Typescript es importante que al finalizar se ejecute el comando `tsc ubicacion/script.ts` para transpilar el código a Javascript, y ese archivo generado es el que importaríamos a un HTML, en la carpeta [HelloWorld](./HelloWorld) puede verse ese ejemplo.
+Como el navegador no entiende la sintaxis de Typescript es importante que al finalizar se ejecute el comando `tsc ubicacion/script.ts` para transpilar el código a Javascript, y ese archivo generado es el que importaríamos a un HTML.
 
 ### Archivo tsconfig
 
@@ -50,4 +56,4 @@ El archivo [tsconfig.js](https://aka.ms/tsconfig) permite gestionar las configur
 
 ### Watch Mode
 
-Este modo permite sean identificados los cambios que surjan en los script de Typescript y en vivo empieza a trasnpilar el código a Javascript, para lograr esto se ejecuta el comando `tcs --watch`
+Este modo permite sean identificados los cambios que surjan en los script de Typescript y en vivo empieza a trasnpilar el código a Javascript, para lograr esto se ejecuta el comando `tcs --watch`. En las carpetas mencionadas en la sección de tipos de datos, se pueden observar las contrapartes de los archivos Typescript transpiladas a Javascript.

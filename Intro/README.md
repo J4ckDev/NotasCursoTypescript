@@ -40,19 +40,42 @@ Como el navegador no entiende la sintaxis de Typescript es importante que al fin
 
 ### Archivo tsconfig
 
-El archivo [tsconfig.js](https://aka.ms/tsconfig) permite gestionar las configuraciones que debería aplicar Typescript y también nos permite transpilar a Javascript todos los scripts que encuentre solo ejecutando el comando `tsc`. Para crear y tener una configuración base podemos ejecutar el comando `tsc --init`, que entre su contenido lo principal para tener activado sería lo siguiente:
+El archivo [tsconfig.js](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) permite gestionar las [configuraciones](https://aka.ms/tsconfig) que debería aplicar Typescript y también nos permite transpilar a Javascript todos los scripts que encuentre solo ejecutando el comando `tsc`. Para crear y tener una configuración base podemos ejecutar el comando `tsc --init`, que entre su contenido lo principal para tener activado sería lo siguiente:
 
 ```json
 {
   "compilerOptions": {
-    "module": "CommonJS", // Forma como debe gestionar los módulos
-    "target": "ES5", // Versión a la cuál va a transpilar
-    "strict": true, // Modo estricto
-    "noImplicitAny": true, // Muestra un error para tipos de dato any
-    "strictNullChecks": true // Cuando es true (valor recomendado) no permite que las variables puedan tener el valor undefined o null
-  }
+    "module": "CommonJS",
+    "target": "AMD",
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true
+    "sourceMap": true,
+    "removeComments": true,
+    "outFile": "main.js"
+  },
+  "exclude": [
+    "node_modules2"
+  ],
+  "include": [
+    "node_modules"
+  ]
 }
 ```
+
+La explicación de las opciones o configuraciones del `tsconfig` anterior sería la siguiente:
+
+- **compilerOptions**: Es un objeto que contiene las configuraciones u opciones que debe aplicar al momento de la transpilación a Typescript.
+  - **module**: Forma como debe gestionar los módulos.
+  - **target**: Versión de JS a la cuál va a transpilar. Entre más vieja, más soporte a navegadores antiguos.
+  - **strict**: Cuando es `true` los scripts transpilados a Javascript usan el modo estricto.
+  - **noImplicitAny**: Cuando es `true` muestra un error para los tipos de datos any.
+  - **strictNullChecks**: Cuando es `true` (valor recomendado) no permite que las variables puedan tener el valor undefined o null.
+  - **sourceMap**: Cuando es `true` habilita la opción de ver en qué línea del archivo typescript fue ejecutada una acción como un console.log o donde ocurrió un error desde el navegador. **Solo usarlo en desarrollo no en producción**.
+  - **removeComments**: Cuando es `true` los comentarios de los scripts Typescript no se incluyen en los archivos transpilados a Javascript.
+  - **outFile**: Indicar el nombre del archivo de salida para transpilar el código en un solo archivo.
+- **exclude**: Excluir las carpetas o archivos (con o sin regex) donde el transpilador no debe generar los archivos JS.
+- **include**: Incluir las carpetas o archivos (con o sin regex) donde el transpilador si debe generar los archivos JS. Esto es usado cuando quiere asegurarse que una carpeta o archivo sea compilado, si esta configuración no existe por defecto todos los archivos TS que encuentre son compilados. Como ejemplo se incluyó la carpeta `node_modules` la cuál es la única carpeta que se tendrá en cuenta al transpilar, eso sí **nunca incluir esa carpeta a una transpilación**.
 
 ### Watch Mode
 

@@ -4,10 +4,11 @@
     // File Layout
     // "rootDir": "./src",
     // "outDir": "./dist",
+    "outFile": "main.js",
 
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
-    "module": "CommonJS",
+    "module": "AMD",
     "target": "ES5",
     // "types": [],
     // For nodejs:
@@ -16,7 +17,8 @@
     // and npm install -D @types/node
 
     // Other Outputs
-    // "sourceMap": true,
+    "sourceMap": true,
+    "removeComments": true,
     // "declaration": true,
     // "declarationMap": true,
 
@@ -43,4 +45,5 @@
     // "moduleDetection": "force",
     // "skipLibCheck": true,
   },
+  "exclude": ["node_modules2"],
 }

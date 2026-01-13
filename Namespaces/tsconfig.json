@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "module": "AMD",
+    "target": "ES6",
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "sourceMap": true,
+    "removeComments": true,
+    "outFile": "app.js",
+  },
+  "exclude": ["ProyectoInicial"],
+}

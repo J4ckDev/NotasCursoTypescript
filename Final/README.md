@@ -6,6 +6,10 @@ En este proyecto se muestra el manejo de importaciones, exportaciones, el uso de
 
 En este proyecto es posible ver el manejo de las exportaciones por defecto y por nombre.
 
+## Funciones genéricas
+
+Una función genérica permite recibir cualquier tipo de dato, pero también es posible indicarle a Typescript que valor retorna dicha función basado en su entrada, de esta forma nos aseguramos que al momento de usar la función sepamos que tipos de dato podríamos esperar como respuesta.
+
 ## Ejecución del proyecto
 
 Los pasos para levantar este proyecto son los siguientes:

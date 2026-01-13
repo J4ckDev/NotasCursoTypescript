@@ -1,4 +1,12 @@
-# Proyecto inicial
+# Secciones finales del curso
+
+En este proyecto se muestra el manejo de importaciones, exportaciones, el uso de generics y decoradores.
+
+## Exportaciones e importaciones
+
+En este proyecto es posible ver el manejo de las exportaciones por defecto y por nombre.
+
+## Ejecución del proyecto
 
 Los pasos para levantar este proyecto son los siguientes:
 

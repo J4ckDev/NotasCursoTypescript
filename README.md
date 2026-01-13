@@ -6,3 +6,4 @@ Este repositorio esta dedicado a guardar todas las notas de clase del curso de T
 2. Continua con la carpeta [POO](./POO) para entender la programación orientada a objetos con Typescript.
 3. Para conocer otra alternativa a los tipos de datos personalizados, continúa con el contenido de la carpeta [Interfaces](./Interfaces).
 4. Aunque se está dejando de utilizar, es bueno conocer el manejo de [Namespaces](./Namespaces) que usan algunos frameworks internamente.
+5. Por último, ingresa a la carpeta [Final](./Final) para conocer sobre las importaciones, exportaciones, generics y decoradores en Typescript.

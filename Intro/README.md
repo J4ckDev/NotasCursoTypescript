@@ -45,8 +45,8 @@ El archivo [tsconfig.js](https://www.typescriptlang.org/docs/handbook/tsconfig-j
 ```json
 {
   "compilerOptions": {
-    "module": "CommonJS",
-    "target": "AMD",
+    "module": "AMD",
+    "target": "ES6",
     "strict": true,
     "noImplicitAny": true,
     "strictNullChecks": true
